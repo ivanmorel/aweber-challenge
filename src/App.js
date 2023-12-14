@@ -31,7 +31,7 @@ function App() {
       <label htmlFor="password1">Repeat Password</label>
       <input onChange={(e) => handleChange(e, 'password2')} value={password2} name="password2" />
       <button type='submit'>Submit</button>
-      {error.length > 0 ? hasSubmitted && error.map((e) => <div className='error'>{e}</div>) : hasSubmitted && <div className='success'>Success</div>}
+      {error.length > 0 ? hasSubmitted && error.map((e) => <div className='error' key={e}>{e}</div>) : hasSubmitted && <div className='success'>Success</div>}
     </form>
   );
 }
